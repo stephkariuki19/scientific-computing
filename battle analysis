@@ -1,0 +1,70 @@
+#HISTOGRAM OF DEFENDER SIZE
+#import pandas as pd
+#import matplotlib.pyplot as plt
+#import seaborn as sns
+#df = pd.read_csv(r'C:\Users\HP\Desktop\MY_ASSINGMENTS\modelled-figures\battles.csv')
+#plt.hist(df["defender_size"],bins=35,alpha=0.45,color='red')
+#plt.show()
+
+#PIE CHART OF BATTLE_TYPE
+#import matplotlib.pyplot as plt
+#import pandas as pd
+#battle_type=[14,9,15,1]
+#colors=["b","r","k","m"]
+#fig, ax= plt.subplots(figsize=(6,6,))
+#pie=ax.pie(battle_type,colors=colors, explode=(0.2,0.3,0.2,0),shadow=True,labels=["pitched bat","ambush","siege","razing"])
+#plt.show()
+#PLOTTING ERROR GRAPH FOR DEFENDER SIZE
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+df = pd.read_csv(r'C:\Users\HP\Desktop\MY_ASSINGMENTS\modelled-figures\battles.csv')
+x= df["defender_size"]
+dy= 0.1
+y= np.random.normal(np.sin(x),dy)
+fig, ax=plt.subplots()
+plt.errorbar(x,y,fmt='.m')
+plt.errorbar(x,y,dy,fmt='.m')# adds the lines to plots
+plt.show()
+#CONTOUR PLOT FOR DEFENDER AND ATTACKER SIZE
+#import pandas as pd
+#import numpy as np
+#import matplotlib.pyplot as plt
+#import seaborn as sns
+#df = pd.read_csv(r'C:\Users\HP\Desktop\MY_ASSINGMENTS\modelled-figures\battles.csv')
+#x=np.array([4000,120,1000,20000,6000,12625,900,2000,10000,100,7250,6000,3500,1240,200,200,8000])
+#y=np.array([15000,15000,18000,1875,6000,1000,264,244,20,618,6000,5000,20000,100,6000,21000,3000,3500,100000,4500,2000,3000,1500,5000])
+#z=np.cos(y[:,np.newaxis])*np.sin(x)
+#fig,ax=plt.subplots()
+#im=ax.contourf(x,y,z,50)
+#fig.colorbar(im,ax=ax)
+#plt.show()
+#3-D PLOT OF ATTACKER SIZE
+from mpl_toolkits.mplot3d import Axes3D
+#import matplotlib.pyplot as plt
+#import numpy as np
+#import seaborn as sns
+#fig=plt.figure()
+#ax=plt.axes(projection="3d")
+#z=np.array([15000,15000,18000,1875,6000,1000,264,244,20,618,6000,5000,20000,100,6000,21000,3000,3500,100000,4500,2000,3000,1500,5000])
+#x=z*np.sin(20*z)
+#y=z*np.cos(20*z)
+#c= x+y
+#ax.scatter(x,y,z, c=c)
+#plt.show()
+#fig=plt.figure()
+#ax=plt.axes(projection="3d")
+#ax.plot(x,y,z,"-b")
+#plt.show()
+#SURFACE PLOT OF DEFENDER SIZE
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from matplotlib import cm
+# x=np.outer(np.linspace(-3,3,30),np.ones(30))
+# y=x.copy().T
+# z=np.cos(x**3 + y**3)
+# fig=plt.figure()
+# ax=plt.axes(projection="3d")
+# ax.plot_surface(x,y,z, cmap=cm.coolwarm,rstride=1, cstride=1,linewidth=1)
+# plt.show()
