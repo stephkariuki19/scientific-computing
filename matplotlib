@@ -1,0 +1,28 @@
+#cos function
+import pandas as pd
+from matplotlib import pyplot as plt
+columns =["X","COSX"]
+df = pd.read_csv(r'C:\Users\HP\Desktop\MY_ASSINGMENTS\cos_data.csv',usecols=columns)
+print("Contents in csv file:\n",df)
+plt.plot(df.X,df.COSX)
+plt.show()
+#sin function
+import matplotlib.pyplot as plt
+import numpy as np
+fig =plt.figure()
+ax=fig.add_subplot(1,1,1)
+x=np.linspace(0,20,50)
+y=np.sin(x)
+ax.plot(x,y,'-o',label="sine")
+plt.show()
+#tan function
+import pandas as pd
+from matplotlib import pyplot as plt
+#plt.rcParams["figure.figsize"] = [7.00,3.50]
+#plt.rcParams ["figure.autolayout"] = True
+columns =["X","TANX"]
+df = pd.read_csv(r'C:\Users\HP\Desktop\MY_ASSINGMENTS\tan_data.csv',usecols=columns)
+C:\Users\HP\Desktop\MY_ASSINGMENTS\modelled-figures
+print("Contents in csv file:\n",df)
+plt.plot(df.X,df.TANX)
+plt.show()
